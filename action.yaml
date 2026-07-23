@@ -66,4 +66,4 @@ outputs:
     description: The status of the approval ("approved" or "denied")
 runs:
   using: docker
-  image: Dockerfile
+  image: "docker://ghcr.io/step-security/manual-approval:v1.13.1@sha256:2486bb33b3c9955cc08f96d2ee0609c353d908104cc3c961a907f567c97c9054" # v1.13.1
