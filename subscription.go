@@ -72,7 +72,9 @@ func checkSubscription() {
 		fmt.Println("Timeout or API not reachable. Continuing to next step.")
 		return
 	}
-	defer resp.Body.Close()
+	defer func() {
+		_ = resp.Body.Close()
+	}()
 
 	if resp.StatusCode == http.StatusForbidden {
 		fmt.Println("::error::\033[1;31mThis action requires a StepSecurity subscription for private repositories.\033[0m")
