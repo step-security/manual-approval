@@ -1,0 +1,3 @@
+[[IgnoredVulns]]
+id = "GO-2026-5932"
+reason = "golang.org/x/crypto/openpgp is a transitive dependency via golang.org/x/oauth2; manual-approval does not import or use any openpgp packages, so the vulnerable code path is never exercised."
